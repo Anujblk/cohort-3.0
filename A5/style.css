@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    min-height: 100%;
+    width: 100%;
+    background: #f8f7f4;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-left,
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav img{
+    width: 90px;
+    height: auto;
+}
+
+nav button{
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 25px;
+    text-align: center;
+}
+
+h1{
+    font-size: 72px;
+    line-height: 1;
+    font-family: serif;
+}
+
+.center p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.btn{
+    width: 700px;
+    background: white;
+    padding: 18px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn input{
+    width: 70%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+.ri-search-line{
+    background: hotpink;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.trend{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trend p{
+    background: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.filtering-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.categories{
+    display: flex;
+    gap: 25px;
+}
+
+.filtering-bar button{
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 40px;
+}
+
+.board div{
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.board img,
+.board video{
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.board img:hover,
+.board video:hover{
+    transform: scale(1.05);
+}
+
+.signUp{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin: 80px 0 60px;
+
+    padding-left: 50%;
+}
+.signup-btn{
+    padding: 16px 28px;
+    border-radius: 999px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrow-btn{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.banner{
+    display: flex;
+    gap: 40px;
+    overflow: hidden;
+    padding: 30px 0;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+}
+
+.banner img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+footer{
+    padding: 50px;
+}
+
+footer img{
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+.footer_lin1{
+    gap: 40px;
+}
+
+.footer_lin1,
+.footer_lin2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.links,
+.socials,
+.cpyright,
+.place{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@keyframes marquee{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size: 42px;
+    }
+
+    .btn{
+        width: 90%;
+    }
+
+    .filtering-bar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .categories{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .board img,
+    .board video{
+        width: 90vw;
+    }
+
+    .footer_lin1,
+    .footer_lin2{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
